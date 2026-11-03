@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task</title>
+
+    <!-- Bootstrap 6 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container vh-100">
+      <div class="row align-items-center h-100">
+        <div class="col-12 lg:col-6 col-lg-6 text-center">
+            <img id="image" src="./imgs/2.jpeg" alt="main image" class="w-50 rounded">
+        </div>
+
+        <div id="welcome-content" class="col-12 lg:col-6 mt-5 lg:mt-0 text-center lg:text-start">
+            <h3>welcome</h3>
+            <p style="color: gray;">We're glad you're here! Sign up to start</p>
+            <button onclick="getStarted()" class="btn btn-primary w-75">Get Started</button>
+        </div>
+
+        <div id="create-account-content" class="col-12 lg:col-6 mt-5 lg:mt-0 text-center lg:text-start d-none">
+            <h3>Create Account</h3>
+            <p class="w-75 lg:w-50 mx-auto lg:mx-0" style="color: gray;">Go ahead and sign up, let everyone know how awesome you are!</p>
+            <div id="alert" class="d-none mx-auto alert theme-danger mb-5 w-75">
+                <p id="alert-data">Enter Valid Data</p>
+            </div>
+            <input id="username" type="text" placeholder="User Name" class="form-control mx-auto lg:mx-0 w-75 mb-5" />
+            <input id="email" type="email" placeholder="Email" class="form-control mx-auto lg:mx-0 w-75 mb-5" />
+            <input id="password" type="password" placeholder="Password" class="form-control mx-auto lg:mx-0 w-75 mb-5" />
+            <input id="confirm-password" type="password" placeholder="Confirm Password" class="form-control lg:mx-0 mx-auto w-75" />
+            <button onclick="createAccount()" class="form-control mx-auto lg:mx-0 my-5 w-75 btn btn-primary">Create New Account</button>
+        </div>
+
+        <div id="success-content" class="d-none col-12 lg:col-6 mt-5 lg:mt-0 text-center lg:text-start">
+            <h3 class="mx-auto lg:mx-0">Successfully logged in</h3>
+            <p id="user-email" class="mx-auto lg:mx-0 w-50" style="color: gray;">User@gmail.com</p>
+            <button onclick="backToHome()" class="form-control w-75 btn btn-primary">Back Home</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 6 JS -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
